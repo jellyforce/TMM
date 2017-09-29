@@ -1,0 +1,15 @@
+<div id="nav-bar">
+  <div>
+  <!-- for each element in the navigation bar array -->
+  <ul >
+    <li>
+      <!-- Create a link with that name -->
+      <a *ngFor="let nav of navbar" [routerLink]="['/', nav]">
+        <li >
+          {{nav}}
+        </li>
+      </a>
+    </li>
+    </ul>
+  </div>
+</div>

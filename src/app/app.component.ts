@@ -12,4 +12,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   /** Attributes: serve as data, these can be used as {{title}} in your html document*/
   title = 'TMM';
+
+
+
 }
