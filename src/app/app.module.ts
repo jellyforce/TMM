@@ -8,7 +8,7 @@ import { HomeModule } from './home/home.module';
 import { SharedModule} from './shared/shared.module';
 
 
-const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
+const rootRouting: ModuleWithProviders = RouterModule.forRoot([]);
 
 
 @NgModule({
