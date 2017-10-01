@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 
 import * as $ from 'jquery';
 
@@ -10,15 +10,17 @@ declare var $: any ;
 @Component({
   selector: 'app-uitgaven-form',
   templateUrl: './uitgaven.toevoegen.component.html',
-  styleUrls: ['./uitgaven.toevoegen.component.css']
+  styleUrls: ['./uitgaven.toevoegen.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 
 
 export class UitgavenToevoegenComponent {
   constructor () {
+    /*adding removefunction for dynamic inserted elements of the table*/
   $(document).ready(function(){
     $('#uitgaven-table').on('click', '#add-row-btn', function(){
-      /*parentnode = <td>, of parentnode = <tr>, of parentnode =<table>. remove, <tr> (element)>*/
+      /*parentnode = <td>, of parentnode = <tr>, of parentnode = <table>, removechild = <tr> (element)>*/
       this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentElement);
     });
   });
@@ -37,6 +39,7 @@ export class UitgavenToevoegenComponent {
   ];
 
   private addRowUitgaven() {
+    /*node is the new row element that will be inserted into the table when button clicked*/
     const node = document.createElement('tr');
     const tablerow =
       '           <td>\n' +
