@@ -1,5 +1,12 @@
 import {Component} from '@angular/core';
 
+import * as $ from 'jquery';
+
+/*
+
+declare var $: any ;
+*/
+
 @Component({
   selector: 'app-uitgaven-form',
   templateUrl: './uitgaven.toevoegen.component.html',
@@ -8,7 +15,15 @@ import {Component} from '@angular/core';
 
 
 export class UitgavenToevoegenComponent {
-  constructor () {}
+  constructor () {
+  $(document).ready(function(){
+    $('#uitgaven-table').on('click', '#add-row-btn', function(){
+      /*parentnode = <td>, of parentnode = <tr>, of parentnode =<table>. remove, <tr> (element)>*/
+      this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentElement);
+    });
+  });
+
+  }
 
   Categories = [
     new Categorie(1, '- Select -'),
@@ -69,14 +84,22 @@ export class UitgavenToevoegenComponent {
       '                  {{categorie.name}}\n' +
       '                </option>\n' +
       '              </select>\n' +
+      '            </td>' +
+      '            <td>' +
+      '            <input type="button" value="X" id="add-row-btn">' +
       '            </td>';
     node.innerHTML = tablerow;
     /*const node will be added to the parent node:*/
     const parentElement = document.getElementById('uitgaven-table');
     parentElement.appendChild(node);
-
-
   }
+
+
+
+
+  private deleteRow() {
+  window.alert('rwneosdfkv');
+      }
 
 }
 
