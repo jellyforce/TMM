@@ -2,6 +2,7 @@
 
 html {
   position: relative;
+  height: 150vh;
   min-height: 100%;
   background-image: url("./assets/images/bg2.jpg");
   background-repeat: no-repeat;
@@ -11,6 +12,7 @@ html {
 body {
   margin: 0 0 100px; /* bottom = footer height */
   padding: 25px;
+  height: 120vh;
 }
 
 /*
@@ -163,7 +165,7 @@ app-footer{
   width: 97.5%;
   bottom: 0px;
   right:20px;
-  left: 23px;
+  left: 21px;
   text-align: center;
   overflow: hidden;
 }
@@ -182,7 +184,7 @@ app-footer{
 #left-panel{
   float: left;
   width: 180px;
-  height: 680px;
+  height: 120vh;
   border-right: 4px solid white;
 
 }
@@ -190,15 +192,15 @@ app-footer{
 #right-panel{
   float:right;
   width: 180px;
-  height: 680px;
+  height: 120vh;
   border-left: 4px solid white;
 }
 
 
 
 #article{
-  margin: 0;
-  height: 680px;
+  margin-bottom: 50px;
+  height: 120vh;
   color: black;
   background: black;
   background-color: rgba(0,0,0,0.8);

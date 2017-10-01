@@ -61,7 +61,8 @@ export class UitgavenToevoegenComponent {
       '                </option>\n' +
       '                <option>\n' +
       '                  Cadeau\'s\n' +
-      '                </option>\n' +      '                <option>\n' +
+      '                </option>\n' +
+      '                <option>\n' +
       '                  Reizen\n' +
       '                </option>\n' +
       '                <option>\n' +
@@ -83,18 +84,41 @@ export class UitgavenToevoegenComponent {
       '            </td>\n' +
       '            <td>\n' +
       '              <select class="selectbox">\n' +
-      '                <option *ngFor="let categorie of Categories">\n' +
-      '                  {{categorie.name}}\n' +
+      '                <option>\n' +
+      '                  -Select-\n' +
+      '                </option>\n' +
+      '                <option>\n' +
+      '                  Eten/Drinken\n' +
+      '                </option>\n' +
+      '                <option>\n' +
+      '                  Drogisterij\n' +
+      '                </option>\n' +
+      '                <option>\n' +
+      '                  Kleding/Schoenen\n' +
+      '                </option>\n' +
+      '                <option>\n' +
+      '                  Sociaal\n' +
+      '                </option>\n' +
+      '                <option>\n' +
+      '                  Cadeau\'s\n' +
+      '                </option>\n' +
+      '                <option>\n' +
+      '                  Reizen\n' +
+      '                </option>\n' +
+      '                <option>\n' +
+      '                  Overig\n' +
       '                </option>\n' +
       '              </select>\n' +
       '            </td>' +
       '            <td>' +
-      '            <input type="button" value="X" id="add-row-btn">' +
+      '             <input type="button" value="X" id="add-row-btn">' +
       '            </td>';
     node.innerHTML = tablerow;
     /*const node will be added to the parent node:*/
     const parentElement = document.getElementById('uitgaven-table');
     parentElement.appendChild(node);
+
+    $('#uitgaven-table').css('clear:both');
   }
 
 
