@@ -1,0 +1,49 @@
+<div class="home-page">
+
+  <div id="left-panel"></div>
+
+  <div id="right-panel"></div>
+
+
+  <div id="article">
+
+
+    <section id="article-header">
+      <span id="article-header-title">
+        <p>Uitgaven</p>
+      </span>
+    </section>
+
+      <section id="article-main">
+        <div id="selection-title">
+          <p>Maak uw keuze:</p>
+        </div>
+
+        <!-- Choices to select from-->
+        <div id="selection-box">
+
+          <div id="selection-box-inner1">
+            <a [routerLink]="['/Uitgaven/Toevoegen']">
+              <div id="uitgaven-add"></div>
+            </a>
+            <span>Toevoegen</span>
+          </div>
+
+          <div id="selection-box-inner2">
+            <a [routerLink]="['/Uitgaven/Toevoegen']">
+              <div id="uitgaven-remove"></div>
+            </a>
+            <span>Verwijderen</span>
+          </div>
+
+          <div id="selection-box-inner3">
+            <a [routerLink]="['/Uitgaven/Toevoegen']">
+              <div id="uitgaven-view"></div>
+            <span>Overzicht</span>
+            </a>
+          </div>
+        </div>
+      </section>
+  </div>
+
+</div>

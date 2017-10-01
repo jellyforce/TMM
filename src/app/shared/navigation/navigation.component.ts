@@ -9,7 +9,9 @@ export class NavigationComponent {
   constructor() {}
   navbar: String[] = [
     'Home',
-    'Bonnetjes',
+    'Uitgaven',
+    'Inkomsten',
+    'Maandlasten',
     'Overzicht',
     'BLA',
     'Lorem']; }

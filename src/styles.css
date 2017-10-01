@@ -199,23 +199,24 @@ app-footer{
 #article{
   margin: 0;
   height: 680px;
-  background-color: darkgray;
+  color: black;
+  background: black;
   background-color: rgba(0,0,0,0.8);
 
 }
 
 #article-header{
-  width: 50%;
+  width: 60%;
   height: 100px;
   margin: auto;
   text-align: center;
-  background-color: white;
+  background-color: black;
   opacity: .5;
 }
 
 #article-header-title{
   text-align: center;
-  color: black;
+  color: white;
   line-height: 100px;
   font-size: 28px;
   opacity: .5;
@@ -228,7 +229,8 @@ app-footer{
   width: 70%;
   height: 549.9px;
   text-align: center;
-  background-color: white;
+  color: black;
+  background-color: black;
   opacity: .5;
 }
 

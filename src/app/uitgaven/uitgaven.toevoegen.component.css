@@ -1,0 +1,59 @@
+#app-uitgaven-form{
+  width: 70%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: cornflowerblue;
+}
+
+.selectbox{
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+}
+
+section form{
+  margin-top: 50px;
+  background: white;
+  opacity: .5;
+}
+table{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+tr{
+  border-right: 3px solid blue;
+}
+
+th{
+  width: 16.667%;
+  width: calc(100%/6);
+  font-weight: bold;
+  font-size: 20px;
+  border-right: 3px solid cornflowerblue;
+  border-bottom: 3px solid cornflowerblue;
+}
+
+td{
+  width: 16.667%;
+  width: calc(100%/6);
+  text-align: center;
+  border-right: 3px solid cornflowerblue;
+}
+
+#more-rows{
+  float: right;
+  width: 20%;
+  height: 30px;
+  font-size: 20px;
+  color: white;
+  background: black;
+}
+
+#more-rows:hover{
+  opacity: .5;
+  border: 2px solid cornflowerblue;
+  background: white;
+  color: black;
+}

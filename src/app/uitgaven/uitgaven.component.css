@@ -5,6 +5,7 @@
 #article-main p{
   text-align: center;
   font-size: 20px;
+  color: white;
 }
 #selection-title{
   height: 25%;
@@ -13,7 +14,7 @@
   margin: auto;
   width: 70%;
   height: 70%;
-  background-color: gray;
+  background-color: black;
 }
 
 #selection-box-inner1{
@@ -22,8 +23,10 @@
   width: calc(100%/3);
   height: 100%;
   background-color: cornflowerblue;
+  border-radius: 100%;
 }
-#selection-box-inner1:hover > #bon-add{
+
+#selection-box-inner1:hover > #bon-remove{
   background-image: url('../../assets/images/add_selected.png');
   cursor: pointer;
 }
@@ -34,6 +37,7 @@
   width: calc(100%/3);
   height: 100%;
   background-color: cornflowerblue;
+  border-radius: 100%;
 }
 #selection-box-inner2:hover > #bon-remove{
   background-image: url('../../assets/images/remove_selected.png');
@@ -45,6 +49,7 @@
   width: calc(100%/3);
   height: 100%;
   background-color: cornflowerblue;
+  border-radius: 100%;
 }
 #selection-box-inner3:hover > #bon-view{
   background-image: url('../../assets/images/view_selected.png');
@@ -56,7 +61,7 @@
   font-size: 20px;
 }
 
-#bon-add{
+#uitgaven-add{
   width: 128px;
   height:128px;
   margin-top: 90px;
@@ -65,7 +70,7 @@
   background-image: url('../../assets/images/add.png');
 }
 
-#bon-remove{
+#uitgaven-remove{
   width: 128px;
   height:128px;
   margin-top: 90px;
@@ -75,7 +80,7 @@
 
 }
 
-#bon-view{
+#uitgaven-view{
   width: 128px;
   height:128px;
   margin-top: 90px;

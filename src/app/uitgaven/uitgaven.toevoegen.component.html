@@ -1,0 +1,64 @@
+<div class="home-page">
+
+  <div id="left-panel"></div>
+
+  <div id="right-panel"></div>
+
+
+  <div id="article">
+
+
+    <section id="article-header">
+      <span id="article-header-title">
+        <p>Voeg hier je uitgaven toe</p>
+      </span>
+    </section>
+
+
+
+
+    <section id="app-uitgaven-form">
+      <form>
+        <table id="uitgaven-table">
+          <tr>
+            <th>Categorie</th>
+            <th>Naam</th>
+            <th>Prijs</th>
+            <th>Aantal</th>
+            <th>Totaal</th>
+            <th>Winkel</th>
+          </tr>
+          <tr>
+            <td>
+              <select class="selectbox">
+                <option *ngFor="let categorie of Categories">
+                  {{categorie.name}}
+                </option>
+              </select>
+            </td>
+            <td>
+              <input>
+            </td>
+            <td>
+              <input>
+            </td>
+            <td>
+              <input>
+            </td>
+            <td>
+              <label></label>
+            </td>
+            <td>
+              <select class="selectbox">
+                <option *ngFor="let categorie of Categories">
+                  {{categorie.name}}
+                </option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <input type="button" id="more-rows" value="Voeg product toe" (click)="addRowUitgaven()">
+      </form>
+    </section>
+  </div>
+</div>
