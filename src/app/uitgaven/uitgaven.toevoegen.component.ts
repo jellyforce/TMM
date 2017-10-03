@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component} from '@angular/core';
 
 import * as $ from 'jquery';
 
@@ -10,8 +10,7 @@ declare var $: any ;
 @Component({
   selector: 'app-uitgaven-form',
   templateUrl: './uitgaven.toevoegen.component.html',
-  styleUrls: ['./uitgaven.toevoegen.component.css'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./uitgaven.toevoegen.component.css']
 })
 
 
@@ -19,7 +18,7 @@ export class UitgavenToevoegenComponent {
   constructor () {
     /*adding removefunction for dynamic inserted elements of the table*/
   $(document).ready(function(){
-    $('#uitgaven-table').on('click', '#add-row-btn', function(){
+    $('#uitgaven-table').on('click', '#delete-btn', function(){
       /*parentnode = <td>, of parentnode = <tr>, of parentnode = <table>, removechild = <tr> (element)>*/
       this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentElement);
     });
@@ -110,24 +109,14 @@ export class UitgavenToevoegenComponent {
       '                </option>\n' +
       '              </select>\n' +
       '            </td>' +
-      '            <td>' +
-      '             <input type="button" value="X" id="add-row-btn">' +
+      '            <td class="delete-btn-td">' +
+      '             <input type="button" value="X" class="delete-btn" id="delete-btn">' +
       '            </td>';
     node.innerHTML = tablerow;
     /*const node will be added to the parent node:*/
     const parentElement = document.getElementById('uitgaven-table');
     parentElement.appendChild(node);
-
-    $('#uitgaven-table').css('clear:both');
   }
-
-
-
-
-  private deleteRow() {
-  window.alert('rwneosdfkv');
-      }
-
 }
 
 /*used for showing the categories in the select-box*/

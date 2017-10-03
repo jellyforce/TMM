@@ -1,18 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 
 html {
-  position: relative;
-  height: 150vh;
-  min-height: 100%;
   background-image: url("./assets/images/bg2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat;
 }
 
 body {
-  margin: 0 0 100px; /* bottom = footer height */
+  margin: 20px;
   padding: 25px;
-  height: 120vh;
+}
+
+router-outlet{
+  width: 100%;
+  display: flex;
+}
+
+.home-page{
+  margin-bottom: 30px;
+  background: black;
+  background-color: rgba(0,0,0,0.8);
 }
 
 /*
@@ -159,20 +165,16 @@ ul li :hover{
 
 */
 app-footer{
+  margin-top: 50px;
+  width: 100%;
   height: 50px;
-  background-color: rgba(0,0,0,0.8);
-  position: absolute;
-  width: 97.5%;
-  bottom: 0px;
-  right:20px;
-  left: 21px;
   text-align: center;
-  overflow: hidden;
 }
 
 #footer-title{
   line-height: 50px;
   color: white;
+  background-color: rgba(0,0,0,0.8);
 }
 
 /*
@@ -180,37 +182,22 @@ app-footer{
                   --->       CONTENT       <---
 ========================================================================================================================
 */
-
-#left-panel{
-  float: left;
-  width: 180px;
-  height: 120vh;
+#article{
+  margin-left: 180px;
+  margin-right: 180px;
+  margin-bottom: 30px;
+  min-height: 600px;
+  color: black;
+  border-left: 4px solid white;
   border-right: 4px solid white;
 
 }
 
-#right-panel{
-  float:right;
-  width: 180px;
-  height: 120vh;
-  border-left: 4px solid white;
-}
-
-
-
-#article{
-  margin-bottom: 50px;
-  height: 120vh;
-  color: black;
-  background: black;
-  background-color: rgba(0,0,0,0.8);
-
-}
-
 #article-header{
-  width: 60%;
+  width: 100%;
   height: 100px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   background-color: black;
   opacity: .5;
@@ -236,3 +223,94 @@ app-footer{
   opacity: .5;
 }
 
+
+/*
+========================================================================================================================
+                  --->       Selection Menu       <---
+========================================================================================================================
+*/
+
+
+#article-main p{
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+#selection-title{
+  margin-top: 30px;
+  height: 25%;
+}
+#selection-box{
+  height: 70%;
+  background-color: black;
+}
+
+#selection-box-inner1{
+  float: left;
+  width: 33.333%;
+  width: calc(100%/3);
+  height: 100%;
+  background-color: cornflowerblue;
+}
+
+#uitgaven-add{
+  width: 128px;
+  height:128px;
+  margin-top: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url('assets/images/add.png');
+}
+
+#selection-box-inner1:hover #uitgaven-add{
+  background-image: url('assets/images/add_selected.png');
+  cursor: pointer;
+}
+
+#selection-box-inner2{
+  float: left;
+  width: 33.333%;
+  width: calc(100%/3);
+  height: 100%;
+  background-color: cornflowerblue;
+}
+
+#uitgaven-remove{
+  width: 128px;
+  height: 128px;
+  margin-top: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url('assets/images/remove.png');
+}
+
+#selection-box-inner2:hover  #uitgaven-remove{
+  background-image: url('assets/images/remove_selected.png');
+  cursor: pointer;
+}
+#selection-box-inner3{
+  float: left;
+  width: 33.333%;
+  width: calc(100%/3);
+  height: 100%;
+  background-color: cornflowerblue;
+}
+
+#uitgaven-view{
+  width: 128px;
+  height:128px;
+  margin-top: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url('assets/images/view.png');
+}
+
+#selection-box-inner3:hover  #uitgaven-view{
+  background-image: url('assets/images/view_selected.png');
+  cursor: pointer;
+}
+
+#selection-box span{
+  font-weight: bold;
+  font-size: 20px;
+}
