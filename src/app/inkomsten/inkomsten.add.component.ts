@@ -1,8 +1,10 @@
-import {Component} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './inkomsten.add.component.html'
+  templateUrl: './inkomsten.add.component.html',
+  encapsulation: ViewEncapsulation.None
+
 })
 
 

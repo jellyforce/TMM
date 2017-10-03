@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 
 import * as $ from 'jquery';
 
@@ -10,7 +10,9 @@ declare var $: any ;
 @Component({
   selector: 'app-uitgaven-form',
   templateUrl: './uitgaven.toevoegen.component.html',
-  styleUrls: ['./uitgaven.toevoegen.component.css']
+  styleUrls: ['./uitgaven.toevoegen.component.css'],
+  encapsulation: ViewEncapsulation.None
+
 })
 
 

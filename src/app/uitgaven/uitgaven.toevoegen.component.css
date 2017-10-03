@@ -64,8 +64,8 @@ td{
   color: black;
 }
 
-.delelete-btn{
-
+.delete-btn:hover{
+  background-color: red;
 }
 
 .delete-btn-td{
