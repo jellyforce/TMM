@@ -36,7 +36,20 @@
 
       <div id="inkomsten-add-form-section">
         <form id="inkomsten-add-form">
-
+          <tr>
+            <th>Categorie</th>
+            <th>Omschrijving</th>
+            <th>Bedrag</th>
+          </tr>
+          <td>
+            <select>
+              <option *ngFor="let categorie of Categorien">
+                {{categorie.name}}
+              </option>
+            </select>
+          </td>
+          <td></td>
+          <td></td>
         </form>
       </div>
     </section>

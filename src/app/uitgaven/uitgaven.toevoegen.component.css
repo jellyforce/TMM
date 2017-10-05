@@ -9,13 +9,13 @@
 }
 
 .selectbox{
+  width: 100%;
   height: 20px;
-  text-align: center;
   font-size: 16px;
 }
 
 section form{
-  align-items: center;
+  width: 100%;
   margin-top: 50px;
   margin-bottom: 50px;
   background: white;
@@ -28,12 +28,12 @@ table{
   margin-bottom: 10px;
 }
 tr{
+  width: 100%;
+  text-align: center;
   border-right: 3px solid blue;
 }
 
 th{
-  width: 16.667%;
-  width: calc(100%/6);
   font-weight: bold;
   font-size: 20px;
   border-right: 3px solid cornflowerblue;
@@ -41,10 +41,11 @@ th{
 }
 
 td{
-  width: 16.667%;
-  width: calc(100%/6);
-  text-align: center;
   border-right: 3px solid cornflowerblue;
+}
+
+table input{
+  width: 100%;
 }
 
 #more-rows{
