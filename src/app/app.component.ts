@@ -1,8 +1,5 @@
 import {Component} from '@angular/core';
-/*
-import {OnInit} from '@angular/core';
-*/
-import {AuthService} from './authentication.service';
+
 
 
 @Component({
@@ -18,24 +15,8 @@ export class AppComponent {
   /** Attributes: serve as data, these can be used as {{title}} in your html document*/
   title = 'TMM';
 
-  email: string;
-  password: string;
+  constructor() {
 
-  constructor(public authService: AuthService) {}
-  signup() {
-    this.authService.signup(this.email, this.password);
-    this.email = this.password = '';
   }
-
-  login() {
-    this.authService.login(this.email, this.password);
-    this.email = this.password = '';
-  }
-
-  logout() {
-    this.authService.logout();
-  }
-
-
 
 }

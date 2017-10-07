@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from '../../login/authentication.service';
+
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html'
 })
 export class HeaderComponent {
-  constructor() {}
-    name = 'Jelle Wiersma';
+  constructor(public auth: AuthenticationService) {}
 
 
 }

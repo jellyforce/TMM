@@ -1,26 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
+/*Angular Modules*/
+import {BrowserModule } from '@angular/platform-browser';
 import {ModuleWithProviders, NgModule} from '@angular/core';
-import { RouterModule, Route} from '@angular/router';
+import {RouterModule, Route} from '@angular/router';
 import {HttpModule} from '@angular/http';
 
+/*Angular Component*/
 import { AppComponent } from './app.component';
-
 
 /*Self-made Modules*/
 import { HomeModule } from './home/home.module';
 import { SharedModule} from './shared/shared.module';
 
 /*Firebase*/
-
 import {environment} from '../environments/environment';
-import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database-deprecated';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AuthenticationService } from './login/authentication.service';
 
 
-import {AngularFireModule} from 'angularfire2';
-import {AngularFireAuthModule} from 'angularfire2/auth';
-import {AngularFireDatabaseModule} from 'angularfire2/database';
-
-import {AuthService} from './authentication.service';
 
 
 
@@ -41,10 +38,9 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([]);
     rootRouting,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
   ],
   /** Providers: */
-  providers: [AuthService],
+  providers: [AuthenticationService],
   /**Bootstrap: */
   bootstrap: [AppComponent]
 })

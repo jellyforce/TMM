@@ -13,7 +13,14 @@
 
   <!-- little white box on the bottom-right corner -->
   <div id="header-fixed-bottom-right">
-    <span>Welkom:</span><span id="header-username">{{name}}</span>
+    <span>Welkom:</span>
+    <div *ngIf="auth.firebaseAuth.authState | async; let user; else showLogin">
+      <p class="navbar-text">{{ user.displayName }}</p>
+      <button type="button" class="btn btn-link navbar-btn" (click)="auth.logout()">Uitloggen</button>
+    </div>
+    <ng-template #showLogin>
+      <button type="button" class="btn btn-link navbar-btn" (click)="auth.login()">Inloggen</button>
+    </ng-template>
   </div>
 
   <span>The Money Manager</span>
