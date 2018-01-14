@@ -11,7 +11,7 @@ import {InkomstenToevoegenComponent} from '../../inkomsten/inkomsten.add.compone
 /* import {OverzichtComponent} from '../../overzicht/overzicht.component'; */
 
 const appRoutes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', component: HomeComponent},  /*starting screen*/
   {path: 'Home', component: HomeComponent},
   {path: 'Uitgaven', component: UitgavenComponent},
   {path: 'Uitgaven/Toevoegen', component: UitgavenToevoegenComponent},

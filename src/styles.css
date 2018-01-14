@@ -1,13 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 html {
-  background-image: url("./assets/images/bg2.jpg");
-  background-repeat: repeat;
 }
 
-body {
-  margin: 20px;
-  padding: 25px;
+body{
+  margin: 0;
+}
+
+.home-page{
+  background-color: white;
 }
 
 router-outlet{
@@ -15,11 +16,6 @@ router-outlet{
   display: flex;
 }
 
-.home-page{
-  margin-bottom: 30px;
-  background: black;
-  background-color: rgba(0,0,0,0.8);
-}
 
 /*
 ========================================================================================================================
@@ -42,20 +38,16 @@ router-outlet{
 ========================================================================================================================
 
 */
-app-header{
-  overflow: hidden;
-}
 
 #header-logo{
   float: left;
   width: 180px;
-  height: 150px;
-  background-color: rgba(0,0,0,0.8);
-  color: white;
+  height: 50px;
+  line-height: 50px;
+  color: #352B1F;
   text-align: center;
-  line-height: 150px;
-  border-right: 4px solid white;
   font-size: 50px;
+  background-color: #E8D8C9;
 
 }
 
@@ -63,37 +55,23 @@ app-header{
   position: relative;
   margin-left: 184px;
   margin-right: 184px;
-  height: 150px;
-  background-color: rgba(0,0,0,0.8);
-  color: white;
+  height: 50px;
+  line-height: 50px;
+  color: #352B1F;
   text-align: center;
-  line-height: 150px;
+
   font-size: 50px;
+  background-color: #E8D8C9;
 }
 
 #header-right{
   width: 180px;
-  height: 150px;
+  height: 50px;
   float: right;
-  background-color: rgba(0,0,0,0.8);
   border-left: 4px solid white;
+  background-color: #E8D8C9;
 }
 
-#header-fixed-bottom-right{
-  position: absolute;
-  bottom: 0;
-  right: 15px;
-  width: 250px;
-  height: 40px;
-
-  text-align: center;
-  color: white;
-  font-size: 15px;
-  line-height: 40px;
-}
-#header-username{
-  margin-left: 30px;
-}
 
 
 /*
@@ -101,15 +79,48 @@ app-header{
                     --->       Navigation       <---
 ========================================================================================================================
 */
+
+/* full header*/
 #nav-bar{
-  height: 50px;
+  background-color: gainsboro;
+  width: 100%;
+  height: 150px;
   text-align: center;
-  margin-bottom: 40px;
-  margin-top: 8px;
 }
-#nav-bar div{
-  display: inline-block;
-  height: 50px;
+
+/* logo - left */
+#nav-bar-logo {
+  float: left;
+  width: 300px;
+  height: 150px;
+  line-height: 150px;
+  color: orangered;
+  text-align: center;
+  font-size: 50px;
+}
+
+/* login section - right */
+#nav-bar-login{
+  float: right;
+  width: 300px;
+  height: 150px;
+}
+
+/* menu-item-container - center */
+#nav-bar-routes{
+  position: relative;
+  margin-left: 300px;
+  margin-right: 300px;
+  height: 150px;
+  text-align: center;
+}
+
+/* holds all menu-items */
+#nav-bar-routes-container{
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  height: 60px;
 }
 
 .nav-link {
@@ -118,40 +129,54 @@ app-header{
 
 
 ul{
-  height: 50px;
-  background: lightslategray;
-  background-color: rgba(0,0,0,0.8);
-
+  display: inline-block;
+  border-bottom: 2px solid orangered;
 }
+
+/* each item in the list */
 ul li{
-  float: left;
-  height: 50px;
   display: inline-block;   /*no bullets in front of list item*/
-}
-
-ul a{
-  text-decoration: none;  /*no underlined txt*/
-  color: white;
-
-}
-
-ul a li{
+  color: black;
   list-style: none;
   line-height: 50px;
-  margin-right: 30px;
-}
-ul li a{
-  color: white;
   font-size: 18px;
+  margin-right: 20px;
+  background-size: 100% 200%;
+  background-image: linear-gradient(to top, lightgray 50%, gainsboro 50%);
+  transition: background-position 0.8s;
+
 }
 
-ul li a:active{
-  color: black;
+ul li a{
+  text-decoration: none;
 }
 
-ul li :hover{
-  color: black;
-  background-color: white;
+/* on hovering link  */
+ul li :hover li {
+  color: orangered;
+  background-position: 0 100%;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+
+.button-login{
+  position: relative;
+  top: 4.5em;
+  width: 80px;
+  height: 30px;
+  color: orangered;
+  box-shadow: 1px 1px 1px 1px gray ;
+  background-size: 100% 200%;
+  background-image: linear-gradient(to top, lightgray 50%, gainsboro 50%);
+  transition: background-position 0.8s;
+  border-style: solid;
+}
+
+.button-login:hover{
+  border-bottom: 2px solid orangered;
+  background-position: 0 100%;
+
+
 }
 
 
@@ -165,16 +190,15 @@ ul li :hover{
 
 */
 app-footer{
-  margin-top: 50px;
   width: 100%;
-  height: 50px;
+  height: 100px;
   text-align: center;
 }
 
 #footer-title{
-  line-height: 50px;
-  color: white;
-  background-color: rgba(0,0,0,0.8);
+  line-height: 80px;
+  color: orangered;
+  background-color: gainsboro;
 }
 
 /*
@@ -182,45 +206,106 @@ app-footer{
                   --->       CONTENT       <---
 ========================================================================================================================
 */
-#article{
-  margin-left: 180px;
-  margin-right: 180px;
-  margin-bottom: 30px;
-  min-height: 600px;
-  color: black;
-  border-left: 4px solid white;
-  border-right: 4px solid white;
 
-}
-
-#article-header{
+.section {
+  height: 450px;
   width: 100%;
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
-/*  background-color: black;
-  opacity: .5;*/
+  background-color: #E5E5E5;
+  margin-bottom: 30px;
+}
+.section-background{
+  height: 450px;
+  background-image: url("./assets/images/homepage/pattern_1.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  opacity: .3;
 }
 
-#article-header-title{
-  text-align: center;
-  color: white;
-  line-height: 100px;
-  font-size: 28px;
-  opacity: .5;
+
+
+h2{
+  position: relative;
+  top: 2em;
+  color: orangered;
+}
+
+
+div.article{
+  position: relative;
+  bottom: 29.4em; /*pusing element on top of transparent element ( or it will be transparent )*/
+  height: 450px;
+  background-repeat: no-repeat;
+}
+
+#article-1{
+}
+
+#article-2{
+}
+
+#article-3{
+}
+
+#img{
+  background-image: url("./assets/images/homepage/3.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#img-2{
+  position: relative;
+  top: 20px;
+  background-image: url("./assets/images/homepage/pen.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#img-3{
+  position: relative;
+  top: 20px;
+  background-image: url("./assets/images/homepage/2.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#article-4{
+  background-position: right;
+  right: 20em;
 }
 
 #article-main {
-  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   width: 70%;
-  height: 549.9px;
+  height: 600px;
   text-align: center;
   color: black;
   background-color: black;
-  opacity: .5;
+  opacity: .6;
+}
+
+.divide-3{
+  width: 33.33%;
+  height: 500px;
+  float: left;
+}
+
+.divide-2{
+  width: 50%;
+  height: 450px;
+  float: left;
+}
+
+.paragraph{
+  position: relative;
+  top: 5em;
+}
+
+.paragraph-2{
+  position: relative;
+  top: 7em;
+  color: orangered;
+  font-size: 20px;
 }
 
 
@@ -248,7 +333,6 @@ app-footer{
 
 #selection-box-inner1{
   float: left;
-  width: 33.333%;
   width: calc(100%/3);
   height: 100%;
   background-color: cornflowerblue;
@@ -270,7 +354,6 @@ app-footer{
 
 #selection-box-inner2{
   float: left;
-  width: 33.333%;
   width: calc(100%/3);
   height: 100%;
   background-color: cornflowerblue;
@@ -291,7 +374,6 @@ app-footer{
 }
 #selection-box-inner3{
   float: left;
-  width: 33.333%;
   width: calc(100%/3);
   height: 100%;
   background-color: cornflowerblue;
